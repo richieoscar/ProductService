@@ -11,4 +11,6 @@
 
 ##ELK for Centralized Logging
 
+##Hystrix CircuitBreaker for Fault Tolerance and Failure Cascading between services
+
 
