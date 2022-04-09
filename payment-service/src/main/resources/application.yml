@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: PAYMENT-SERVICE
+
+  config:
+    import: optional:configserver:http://localhost:8222
+
+  jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: 'create-drop'
+      properties:
+        hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+        hibernate.format_sql: true
+  datasource:
+      url: jdbc:postgresql://localhost:5432/paymentdb
+      username: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+  zipkin:
+    base-url: http://localhost:9411
+
+
+
+server:
+  port: 9090
+  error:
+    include-stacktrace: never
+    include-message: always
+logging:
+  file:
+    name: C:/Users/OSCAR-ANYIAM/Logs/microservices/payment-service.log

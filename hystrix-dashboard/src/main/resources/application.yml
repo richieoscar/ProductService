@@ -1,0 +1,11 @@
+server:
+  port: 8086
+spring:
+  cloud:
+    config:
+      enabled: false
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: '*'
+
+

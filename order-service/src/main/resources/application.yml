@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: ORDER-SERVICE
+
+  config:
+    import: optional:configserver:http://localhost:8222
+  jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: 'create-drop'
+      properties:
+        hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        hibernate.format_sql: true
+  datasource:
+      url: jdbc:mysql://localhost:3306/orderdb
+      username: ${MYSQL_ROOT_USER}
+      password: ${MYSQL_ROOT_PASSWORD}
+  zipkin:
+    base-url: http://localhost:9411
+
+server:
+  port: 9091
+
+logging:
+  file:
+    name: C:/Users/OSCAR-ANYIAM/Logs/microservices/order-service.log
+

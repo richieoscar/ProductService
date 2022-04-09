@@ -1,0 +1,8 @@
+# Project exclude paths
+/api-gateway/target/
+/config-server/target/
+/eureka-server/target/
+/hystrix-dashboard/target/
+/order-service/target/
+/payment-service/target/
+/pricing-service/target/
