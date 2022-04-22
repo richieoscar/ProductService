@@ -1,11 +1,10 @@
 package com.richiesocar.orderservice.controllers;
 
+import com.richieoscar.clients.paymentclient.PaymentRequest;
+import com.richieoscar.clients.paymentclient.PaymentResponse;
 import com.richiesocar.orderservice.dto.OrderRequest;
-import com.richiesocar.orderservice.dto.PaymentRequest;
-import com.richiesocar.orderservice.dto.PaymentResponse;
 import com.richiesocar.orderservice.service.OrderService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

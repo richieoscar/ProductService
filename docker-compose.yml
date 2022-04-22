@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: paymentservicedb
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: payday2018
+
+  mysql:
+    image: mysql:latest
+    container_name: orderservicedb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: payday2018
+
+  zipkin:
+    image: openzipkin/zipkin
+    container_name: zipkin
+    ports:
+      - "9411:9411"
+
+  rabbitMq:
+    image: rabbitmq:3.9.15-management-alpine
+    container_name: rabbitMq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+

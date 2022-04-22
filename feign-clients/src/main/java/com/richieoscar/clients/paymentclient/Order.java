@@ -1,21 +1,16 @@
-package com.richiesocar.orderservice.entities;
+package com.richieoscar.clients.paymentclient;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-@Entity
-@Getter
-@Setter
-@ToString
-@Table(name = "order_table")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private int quantity;
